@@ -1,8 +1,8 @@
 'use client'
 
 import { useAuth } from '@/hooks/auth'
-import Navigation from '@/app/(main)/(app)/Navigation'
-import Loading from '@/app/(main)/(app)/Loading'
+import Navigation from '@/app/(dashboard)/Navigation'
+import Loading from '@/app/(dashboard)/Loading'
 
 const AppLayout = ({ children }) => {
     const { user } = useAuth({ middleware: 'auth' })

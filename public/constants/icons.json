@@ -49,5 +49,6 @@
     "boxOpenFull": "fa-solid fa-box-open-full",
     "hashtag": "fa-light fa-hashtag",
     "close": "fa-light fa-xmark",
-    "check": "fa-light fa-check"
+    "check": "fa-light fa-check",
+    "history": "fa-light fa-clock-rotate-left"
   }

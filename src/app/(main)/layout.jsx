@@ -5,7 +5,7 @@ function MainLayout({ children }) {
     return (
         <>
             {children}
-            <BottomNavbar />
+            {/* <BottomNavbar /> */}
         </>
     )
 }
