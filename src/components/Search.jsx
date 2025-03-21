@@ -127,9 +127,9 @@ export const Search = ({ className }) => {
                     </div>
                 </Drawer.Trigger>
                 <Drawer.Portal>
-                    <Drawer.Overlay className="fixed inset-0 bg-black/40" />
+                    <Drawer.Overlay className="fixed inset-0 bg-black/40 z-40" />
                     <Drawer.Title className="hidden"></Drawer.Title>
-                    <Drawer.Content className="bg-bgPrimary h-[90vh] flex flex-col fixed bottom-0 left-0 right-0 max-h-[100vh] rounded-t-[10px]">
+                    <Drawer.Content className="bg-bgPrimary z-50 h-[90vh] flex flex-col fixed bottom-0 left-0 right-0 max-h-[100vh] rounded-t-[10px]">
                         <div className="w-full mx-auto overflow-auto container py-4 rounded-t-[10px]">
                             <Drawer.Handle />
                             <form action="" className="py-4">

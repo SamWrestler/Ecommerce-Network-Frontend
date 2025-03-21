@@ -1,11 +1,11 @@
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
-        screens: {
-            tablet: '768px',
-            desktop: '1024px',
-        },
         extend: {
+            screens: {
+                tablet: '768px',
+                desktop: '1024px',
+            },
             boxShadow: {
                 custom: '0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)',
             },
@@ -13,6 +13,7 @@ module.exports = {
                 center: true,
                 padding: {
                     DEFAULT: '20px',
+                    lg: '120px',
                 },
             },
             fontFamily: {
