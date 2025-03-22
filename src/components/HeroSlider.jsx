@@ -9,7 +9,7 @@ import Image from 'next/image'
 import Slider_1 from '/public/images/Slider_1.jpg'
 import Slider_2 from '/public/images/Slider_2.jpg'
 import Slider_3 from '/public/images/Slider_3.jpg'
-function HeroSlider() {
+function HeroSlider({ className }) {
     const pagination = {
         clickable: false,
         dynamicBullets: true,
@@ -29,8 +29,8 @@ function HeroSlider() {
             }}
             modules={[Pagination, Autoplay]}
             pagination={pagination}
-            className="w-full h-[275px] sm:h-[350px] md:h-[456px] lg:h-[663px] lg:shadow-custom lg:w-[85%] lg:mt-10
-            lg:mb-10 lg:rounded-lg ">
+            className={`w-full h-[275px] sm:h-[350px] md:h-[456px] lg:h-[663px] lg:shadow-custom lg:w-[85%] lg:mt-10
+            lg:mb-10 lg:rounded-lg ${className}`}>
             <SwiperSlide>
                 <Image
                     src={Slider_1}

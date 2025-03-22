@@ -20,7 +20,7 @@
     "heart": "fa-light fa-heart",
     "shirt": "fa-light fa-shirt",
     "expand": "fa-light fa-up-right-and-down-left-from-center",
-    "star": "fa-light fa-star",
+    "star": "fa-solid fa-star",
     "comment": "fa-light fa-comment",
     "thumbsUp": "fa-light fa-thumbs-up",
     "thumbsDown": "fa-solid fa-thumbs-down",
@@ -50,5 +50,9 @@
     "hashtag": "fa-light fa-hashtag",
     "close": "fa-light fa-xmark",
     "check": "fa-light fa-check",
-    "history": "fa-light fa-clock-rotate-left"
+    "history": "fa-light fa-clock-rotate-left",
+    "quote": "fa-solid fa-quote-right",
+    "downUp": "fa-solid fa-arrows-up-down",
+    "leftRight": "fa-solid fa-arrows-left-right",
+    "phone": "fa-solid fa-mobile"
   }

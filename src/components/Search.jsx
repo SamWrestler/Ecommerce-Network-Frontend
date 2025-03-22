@@ -8,7 +8,7 @@ import useClickOutside from '@/hooks/useClickOutside'
 
 export const Search = ({ className }) => {
     const [isOpen, setIsOpen] = useState(false)
-    const { width, isTablet, isDesktop } = useWindowSize()
+    const { isDesktop } = useWindowSize()
     const [isSearch, setIsSearch] = useState(false)
     const searchContainerRef = useRef(null)
     useClickOutside(searchContainerRef, () => {
@@ -20,50 +20,17 @@ export const Search = ({ className }) => {
     }
 
     const history = [
-        {
-            id: '1',
-            text: 'تاریخچه 1',
-        },
-        {
-            id: '2',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '3',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '4',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '5',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '6',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '7',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '8',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '9',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '10',
-            text: 'تاریخچه 2',
-        },
-        {
-            id: '11',
-            text: 'تاریخچه 2',
-        },
+        { id: '1', text: 'تاریخچه 1' },
+        { id: '2', text: 'تاریخچه 2' },
+        { id: '3', text: 'تاریخچه 3' },
+        { id: '4', text: 'تاریخچه 4' },
+        { id: '5', text: 'تاریخچه 5' },
+        { id: '6', text: 'تاریخچه 6' },
+        { id: '7', text: 'تاریخچه 7' },
+        { id: '8', text: 'تاریخچه 8' },
+        { id: '9', text: 'تاریخچه 9' },
+        { id: '10', text: 'تاریخچه 10' },
+        { id: '11', text: 'تاریخچه 11' },
     ]
 
     if (isDesktop) {
@@ -72,7 +39,7 @@ export const Search = ({ className }) => {
                 id="search"
                 ref={searchContainerRef}
                 onClick={searchHandler}
-                className={`w-[55%] bg-bgPrimary gap-4 px-3 py-4 absolute top-0 left-1/2 translate-x-[-50%] flex flex-col items-center ${isSearch && 'shadow-[0px_3px_8px_3px_rgba(0,_0,_0,_0.1)] rounded-xl'}`}>
+                className={`w-[55%] bg-bgPrimary gap-4 px-3 py-4 absolute top-0 left-1/2 translate-x-[-50%] flex flex-col items-center z-50 ${isSearch && 'shadow-[0px_3px_8px_3px_rgba(0,_0,_0,_0.1)] rounded-xl'}`}>
                 <form action="" className="flex w-full">
                     <div
                         className="flex w-full items-center relative text-textSecondary"
@@ -128,7 +95,7 @@ export const Search = ({ className }) => {
                 </Drawer.Trigger>
                 <Drawer.Portal>
                     <Drawer.Overlay className="fixed inset-0 bg-black/40 z-40" />
-                    <Drawer.Title className="hidden"></Drawer.Title>
+                    <Drawer.Title className="hidden" />
                     <Drawer.Content className="bg-bgPrimary z-50 h-[90vh] flex flex-col fixed bottom-0 left-0 right-0 max-h-[100vh] rounded-t-[10px]">
                         <div className="w-full mx-auto overflow-auto container py-4 rounded-t-[10px]">
                             <Drawer.Handle />

@@ -18,6 +18,7 @@ module.exports = {
             },
             fontFamily: {
                 font: ['Rubik', 'iransans'],
+                lalezar: ['lalezar'],
             },
             colors: {
                 bgPrimary: 'var(--color-bg-primary)',

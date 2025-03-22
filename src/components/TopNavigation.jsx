@@ -7,7 +7,7 @@ import defaultProfileImage from '/public/images/defaultProfile.png'
 import NavLinks from './NavLinks'
 import useWindowSize from '@/hooks/useWindowSize'
 function TopNavigation() {
-    const { width, isTablet, isDesktop } = useWindowSize()
+    const { isTablet, isDesktop } = useWindowSize()
     return (
         <div
             id="topNavbar"
