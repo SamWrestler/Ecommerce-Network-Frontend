@@ -10,7 +10,7 @@ function BusinessInformation() {
     const [faq, setFaq] = useState(false)
     const [about, setAbout] = useState(true)
     return (
-        <div className="flex flex-col gap-4 items-center mt-14">
+        <div className="flex flex-col gap-12     items-center mt-14">
             <h2
                 dir="rtl"
                 className="font-lalezar text-textPrimary text-center text-[25px]">

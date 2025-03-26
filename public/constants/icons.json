@@ -17,7 +17,8 @@
     "instagram": "fa-brands fa-instagram",
     "telegram": "fa-brands fa-telegram",
     "arrowRight": "fa-light fa-arrow-right",
-    "heart": "fa-light fa-heart",
+    "heartOutline": "fa-light fa-heart",
+    "heart": "fa-solid fa-heart",
     "shirt": "fa-light fa-shirt",
     "expand": "fa-light fa-up-right-and-down-left-from-center",
     "star": "fa-solid fa-star",
@@ -30,7 +31,8 @@
     "minus": "fa-light fa-minus",
     "trash": "fa-solid fa-trash",
     "locationDot": "fa-solid fa-location-dot",
-    "chevronLeft": "fa-solid fa-chevron-left",
+    "chevronLeft": "fa-light fa-chevron-left",
+    "chevronUp": "fa-light fa-chevron-up",
     "user": "fa-solid fa-user",
     "users": "fa-solid fa-users",
     "link": "fa-regular fa-link",
@@ -49,10 +51,12 @@
     "boxOpenFull": "fa-solid fa-box-open-full",
     "hashtag": "fa-light fa-hashtag",
     "close": "fa-light fa-xmark",
-    "check": "fa-light fa-check",
+    "check": "fa-solid fa-check",
     "history": "fa-light fa-clock-rotate-left",
     "quote": "fa-solid fa-quote-right",
     "downUp": "fa-solid fa-arrows-up-down",
     "leftRight": "fa-solid fa-arrows-left-right",
-    "phone": "fa-solid fa-mobile"
-  }
+    "phone": "fa-solid fa-mobile",
+    "detail": "fa-regular fa-circle-info",
+    "vest": "fa-light fa-vest-patches"
+}

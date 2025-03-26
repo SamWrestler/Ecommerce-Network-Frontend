@@ -43,7 +43,7 @@ function Footer() {
                             dir="rtl"
                             className="flex flex-col-reverse gap-2 text-[18px]">
                             <h2 dir="rtl" className="text-[20px] font-medium">
-                                اپپلیکیشن #0.03
+                                اپلیکیشن #0.03
                             </h2>
                             <p className="font-light text-textSecondary">
                                 تجربه خریدی بهتر در
