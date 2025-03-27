@@ -9,6 +9,10 @@
     .navbarActive {
         background-color: var(--color-bg-input);
     }
+    .bankSelected {
+        background-color: var(--color-success-trans);
+        border: var(--color-success);
+    }
 }
 
 :root {
@@ -19,6 +23,7 @@
     --color-bg-input: rgba(244, 244, 244, 1); /* #F4F4F4 */
 
     --color-success: rgba(34, 197, 94, 1); /* #22C55E */
+    --color-success-trans: rgba(34, 197, 94, 0.3); /* #22C55E */
     --color-warning: rgba(255, 193, 7, 1); /* #FFC107 */
     --color-error: rgba(239, 68, 68, 1); /* #EF4444 */
 }

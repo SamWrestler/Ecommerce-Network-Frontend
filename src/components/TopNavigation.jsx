@@ -16,6 +16,13 @@ function TopNavigation() {
             {isTablet && <Search className="max-w-7/12 " />}
             {isDesktop && <NavLinks />}
             <div id="notificationProfile" className="flex gap-5 items-center">
+            <Icons name="shoppingBag" className="text-[24px] relative px-2">
+                    <div className="bg-success w-4 h-4 rounded-full flex justify-center items-center absolute bottom-0 right-0">
+                        <p className="text-[12px] text-bgPrimary font-normal font-font">
+                            3
+                        </p>
+                    </div>
+                </Icons>
                 <Icons name="bell" className="text-[24px] relative px-2">
                     <div className="bg-warning w-4 h-4 rounded-full flex justify-center items-center absolute bottom-0 right-0">
                         <p className="text-[12px] text-textPrimary font-normal font-font">

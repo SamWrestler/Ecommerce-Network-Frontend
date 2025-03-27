@@ -22,14 +22,14 @@ function Products() {
                 dir="rtl"
                 className="w-full flex justify-between flex-row-reverse gap-1 items-start">
                 <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 place-items-center gap-y-6 w-full desktop:w-[65vw]">
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
-                    <ProductCard />
+                    <ProductCard href="/products/1" />
+                    <ProductCard href="/products/1" />
+                    <ProductCard href="/products/1" />
+                    <ProductCard href="/products/1" />
+                    <ProductCard href="/products/1" />
+                    <ProductCard href="/products/1" />
+                    <ProductCard href="/products/1" />
+                    <ProductCard href="/products/1" />
                 </div>
                 <div className="flex-col gap-4 w-[27vw] sticky top-3 p-2 !pt-0 hidden desktop:flex">
                     <h2 className="font-semibold text-[18px] w-full">

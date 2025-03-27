@@ -4,10 +4,12 @@ import Icons from './Icons'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import NavigateToTop from './NavigateToTop'
+import useWindowSize from '@/hooks/useWindowSize'
 function BottomNavbar() {
     const [scrolled, setScrolled] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
     const pathName = usePathname()
+    const {isDesktop} = useWindowSize()
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -35,7 +37,7 @@ function BottomNavbar() {
     return (
         <>
         <NavigateToTop scrolled={scrolled}/>
-        <nav className={`flex z-40 fixed bg-bgPrimary w-full bottom-0 font-light shadow-custom items-center  font-font flex-row-reverse transition-all duration-25 ${!scrolled ? "translate-y-full" : "translate-y-0"}`}>
+        <nav className={`flex z-40 fixed bg-bgPrimary w-full bottom-0 font-light shadow-custom items-center  font-font flex-row-reverse transition-all duration-25 ${!scrolled ? "translate-y-full" : "translate-y-0"} ${isDesktop  && "hidden"}`}>
             <Link
                 href="/"
                 className={`flex flex-col w-1/4 py-3 ${pathName === '/' && 'navbarActive'} items-center justify-center gap-1`}>
