@@ -3,6 +3,7 @@ import React from 'react'
 import Icons from './Icons'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode } from 'swiper/modules'
+
 export default function SearchHistory({ histories, className }) {
     if (!histories || histories.length === 0) {
         return null

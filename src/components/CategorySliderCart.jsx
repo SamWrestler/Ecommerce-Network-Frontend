@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import CategoryImage from '/public/images/Category.png'
+
 function CategorySliderCart() {
     return (
         <div className="w-full flex flex-col items-center gap-2 justify-center">

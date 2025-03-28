@@ -4,9 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
-import { Pagination, FreeMode } from 'swiper/modules'
+import { FreeMode, Pagination } from 'swiper/modules'
 import useWindowSize from '@/hooks/useWindowSize'
 import CategorySliderCart from './CategorySliderCart'
+
 export default function CategorySlider() {
     const { isDesktop } = useWindowSize()
     //TODO Change the design of the category slider for better sizing in different devices.

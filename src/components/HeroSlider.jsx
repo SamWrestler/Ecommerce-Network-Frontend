@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Slider_1 from '/public/images/Slider_1.jpg'
 import Slider_2 from '/public/images/Slider_2.jpg'
 import Slider_3 from '/public/images/Slider_3.jpg'
+
 function HeroSlider({ className }) {
     const pagination = {
         clickable: false,

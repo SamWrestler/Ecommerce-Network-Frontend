@@ -1,11 +1,11 @@
-"use client"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Pagination, Zoom } from "swiper/modules"
-import "swiper/css"
-import "swiper/css/pagination"
-import Image from "next/image"
-function ProductPageImage({ images }) {
+'use client'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Zoom } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import Image from 'next/image'
 
+function ProductPageImage({ images }) {
     return (
         <div className="flex h-[60vh] bg-bgPrimary border-b desktop:! border-none mt-[4.5rem]">
             <Swiper
@@ -16,12 +16,11 @@ function ProductPageImage({ images }) {
                     dynamicBullets: true,
                 }}
                 modules={[Pagination, Zoom]}
-                className="!w-full desktop:!w-[30vw]"
-            >
+                className="!w-full desktop:!w-[30vw]">
                 {images.map(image => {
                     return (
                         <SwiperSlide key={image}>
-                                <div className="flex w-full h-full items-center justify-center">
+                            <div className="flex w-full h-full items-center justify-center">
                                 <Image
                                     src={image}
                                     alt="this is Image"
@@ -29,7 +28,7 @@ function ProductPageImage({ images }) {
                                     height={300}
                                     quality={100}
                                 />
-                                </div>
+                            </div>
                         </SwiperSlide>
                     )
                 })}

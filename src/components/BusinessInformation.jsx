@@ -1,7 +1,6 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Icons from './Icons'
-import { useState } from 'react'
 
 import Faq from './Faq'
 import About from './About'

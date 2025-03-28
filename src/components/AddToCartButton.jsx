@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Icons from './Icons'
+
 function AddToCartButton({ className }) {
     const [addToCard, setAddToCart] = useState(false)
 

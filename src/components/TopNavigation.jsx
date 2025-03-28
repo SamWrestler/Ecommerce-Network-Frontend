@@ -6,6 +6,7 @@ import { Search } from './Search'
 import defaultProfileImage from '/public/images/defaultProfile.png'
 import NavLinks from './NavLinks'
 import useWindowSize from '@/hooks/useWindowSize'
+
 function TopNavigation() {
     const { isTablet, isDesktop } = useWindowSize()
     return (
@@ -16,7 +17,7 @@ function TopNavigation() {
             {isTablet && <Search className="max-w-7/12 " />}
             {isDesktop && <NavLinks />}
             <div id="notificationProfile" className="flex gap-5 items-center">
-            <Icons name="shoppingBag" className="text-[24px] relative px-2">
+                <Icons name="shoppingBag" className="text-[24px] relative px-2">
                     <div className="bg-success w-4 h-4 rounded-full flex justify-center items-center absolute bottom-0 right-0">
                         <p className="text-[12px] text-bgPrimary font-normal font-font">
                             3

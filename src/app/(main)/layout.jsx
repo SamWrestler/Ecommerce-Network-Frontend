@@ -4,15 +4,20 @@ import BottomNavbar from '@/components/BottomNavbar'
 import { usePathname } from 'next/navigation'
 import useWindowSize from '@/hooks/useWindowSize'
 import Header from '@/components/Header'
+
 function MainLayout({ children }) {
     const pathName = usePathname()
     const isProductPage = /^\/products\/\d+$/.test(pathName)
-    const {isDesktop} = useWindowSize()
+    const isProfile = /^\/profile\/.+$/.test(pathName) // Match any path starting with /profile/
+    const { isDesktop } = useWindowSize()
     return (
         <>
             {isDesktop && <Header />}
             {children}
-            {!isProductPage && pathName !== "/cart" && <BottomNavbar />}
+            {/* Show BottomNavbar except for /profile/*, /products/* and /cart */}
+            {!isProductPage && pathName !== '/cart' && !isProfile && (
+                <BottomNavbar />
+            )}
         </>
     )
 }

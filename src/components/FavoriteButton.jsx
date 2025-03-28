@@ -1,6 +1,7 @@
 'use client'
 import Icons from './Icons'
 import { useState } from 'react'
+
 function FavoriteButton() {
     const [isFavorite, setIsFavorite] = useState(false)
     const favoriteCickHandler = () => {

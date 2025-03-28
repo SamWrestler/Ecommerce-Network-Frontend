@@ -5,6 +5,7 @@ import 'swiper/css'
 import 'swiper/css/free-mode'
 import { FreeMode } from 'swiper/modules'
 import ProductCard from './ProductCard'
+
 function ProductRow({ discount }) {
     return (
         <Swiper

@@ -1,8 +1,8 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import CollectionWrapper from './CollectionWrapper'
 import DiscountCountdown from './DiscountCountdown'
-import { useState } from 'react'
+
 function Discount() {
     const [timeIsOver, setTimeIsOver] = useState(false)
 

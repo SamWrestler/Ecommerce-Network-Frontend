@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode } from 'swiper/modules'
-import Icons from './Icons'
 import SizingTable from './SizingTable'
 import useWindowSize from '@/hooks/useWindowSize'
 

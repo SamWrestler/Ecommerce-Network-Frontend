@@ -7,7 +7,6 @@ import { useGSAP } from '@gsap/react'
 function NavigateToTop({ scrolled }) {
     const [show, setShow] = useState(false)
     const buttonRef = useRef(null)
-
     useEffect(() => {
         const handleScrollEvent = () => {
             if (window.scrollY > 900) {
@@ -17,10 +16,10 @@ function NavigateToTop({ scrolled }) {
             }
         }
 
-        window.addEventListener("scroll", handleScrollEvent)
+        window.addEventListener('scroll', handleScrollEvent)
 
         return () => {
-            window.removeEventListener("scroll", handleScrollEvent)
+            window.removeEventListener('scroll', handleScrollEvent)
         }
     }, [])
 
@@ -45,7 +44,7 @@ function NavigateToTop({ scrolled }) {
                         if (buttonRef.current) {
                             buttonRef.current.style.display = 'none'
                         }
-                    }
+                    },
                 })
             }
 
@@ -70,15 +69,14 @@ function NavigateToTop({ scrolled }) {
             ref={buttonRef}
             onClick={scrollToTop}
             role="button"
-            dir='rtl'
+            dir="rtl"
             style={{
                 display: 'none',
                 opacity: 0,
                 transform: 'translateY(50px)',
                 cursor: 'pointer',
             }}
-            className={`z-40 bg-textPrimary text-bgPrimary items-center font-font justify-around h-[3.5rem] w-[10rem] rounded-xl fixed  left-4`}
-        >
+            className={`z-40 bg-textPrimary text-bgPrimary items-center font-font justify-around h-[3.5rem] w-[10rem] rounded-xl fixed  left-4`}>
             <h2>بریم بالا</h2>
             <Icons name="chevronUp" />
         </div>

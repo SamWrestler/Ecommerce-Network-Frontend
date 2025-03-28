@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+
 function DiscountCountdown({ initialSeconds, handleTimeIsOver }) {
     const [timeLeft, setTimeLeft] = useState(initialSeconds)
 

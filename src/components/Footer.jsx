@@ -4,6 +4,7 @@ import Link from 'next/link'
 import location from '/public/images/Location.jpg'
 
 import Image from 'next/image'
+
 function Footer() {
     return (
         <footer className="w-full container flex flex-col gap-20 mt-28">

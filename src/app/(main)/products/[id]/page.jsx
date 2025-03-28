@@ -8,16 +8,16 @@ import AddToCartButton from '@/components/AddToCartButton'
 
 export const revalidate = 60
 
-async function getProduct(id) {
-    const res = await fetch(`https://fakestoreapi.com/products/${id}`)
-    if (!res.ok) throw new Error('Product not found')
-    return res.json()
-}
+// async function getProduct(id) {
+//     const res = await fetch(`https://fakestoreapi.com/products/${id}`)
+//     if (!res.ok) throw new Error('Product not found')
+//     return res.json()
+// }
 
 export async function generateStaticParams() {
-    const res = await fetch('https://fakestoreapi.com/products')
-    const products = await res.json()
-    return products.map(product => ({ id: product.id.toString() }))
+    // const res = await fetch('https://fakestoreapi.com/products')
+    // const products = await res.json()
+    return [{ id: '1' }, { id: '2' }, { id: '3' }, { id: '4' }]
 }
 
 export default async function ProductPage({ params }) {
@@ -70,7 +70,6 @@ export default async function ProductPage({ params }) {
     return (
         <div dir="rtl" className="flex flex-col gap-8 font-font">
             <div className="flex flex-col desktop:flex-row">
-
                 {/* Slider for images */}
                 <ProductPageImage images={product.images} />
 
@@ -84,7 +83,7 @@ export default async function ProductPage({ params }) {
                                 <h2 className="text-[22px] text-textPrimary font-medium">
                                     {product.title}
                                 </h2>
-                                <ProductDiscount className="desktop:hidden"/>
+                                <ProductDiscount className="desktop:hidden" />
                             </div>
                             <FavoriteButton />
                         </div>
@@ -100,14 +99,12 @@ export default async function ProductPage({ params }) {
                 {/* Product price only for desktop */}
                 <div className="p-1 w-[35vw] h-fit  desktop:flex justify-center sticky top-0 hidden">
                     <div className="border rounded-md flex flex-col items-start gap-8 w-full h-fit p-6 m-4">
-                        <div className='flex items-start'>
+                        <div className="flex items-start">
+                            {/* Defined in this component */}
+                            <ProductPrice />
 
-                        {/* Defined in this component */}
-                        <ProductPrice />
-
-                        {/* Defined in this component */}
-                        <ProductDiscount />
-
+                            {/* Defined in this component */}
+                            <ProductDiscount />
                         </div>
                         <div className="flex flex-col gap-2 items-center w-full">
                             <hr className="w-full" />
@@ -115,14 +112,12 @@ export default async function ProductPage({ params }) {
                         </div>
                     </div>
                 </div>
-
             </div>
 
             {/* Comment Section */}
-            <div className='flex w-full justify-center p-3'>
+            <div className="flex w-full justify-center p-3">
                 <ProductCommentSection />
             </div>
-
         </div>
     )
 }
@@ -139,9 +134,10 @@ function ProductPrice({ className }) {
     )
 }
 
-function ProductDiscount({className}) {
+function ProductDiscount({ className }) {
     return (
-        <p className={`text-[16px] text-error opacity-60 font-light ${className}`}>
+        <p
+            className={`text-[16px] text-error opacity-60 font-light ${className}`}>
             (25% تخفیف)
         </p>
     )

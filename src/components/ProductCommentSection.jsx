@@ -1,5 +1,5 @@
-import ProductComments from "./ProductComments";
-import ProductOverallOverview from "./ProductOverallOverview";
+import ProductComments from './ProductComments'
+import ProductOverallOverview from './ProductOverallOverview'
 
 function ProductCommentSection() {
     return (
@@ -7,7 +7,7 @@ function ProductCommentSection() {
             <ProductOverallOverview />
             <ProductComments />
         </div>
-     );
+    )
 }
 
-export default ProductCommentSection;
+export default ProductCommentSection

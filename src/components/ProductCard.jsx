@@ -3,11 +3,12 @@ import ProductCardImage from './ProductCardImage'
 import ProductOverview from './ProductOverview'
 import ProductPrice from './ProductPrice'
 import Link from 'next/link'
-function ProductCard({ discount, className, href="" }) {
+
+function ProductCard({ discount, className, href = '' }) {
     return (
         <Link
-        dir='rtl'
-        href={href}
+            dir="rtl"
+            href={href}
             className={`flex flex-col p-2 h-[450px] w-[300px] ${discount && 'bg-bgPrimary rounded-md'} ${className}`}>
             <ProductCardImage />
             <div className="flex flex-col gap-2 mt-2">

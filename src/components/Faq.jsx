@@ -6,6 +6,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import Icons from './Icons'
 import useWindowSize from '@/hooks/useWindowSize'
+
 function Faq({ className }) {
     const { isDesktop } = useWindowSize()
     const faqs = [

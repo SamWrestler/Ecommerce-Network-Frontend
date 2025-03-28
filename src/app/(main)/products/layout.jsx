@@ -1,20 +1,19 @@
 // import BottomNavbar from '@/components/BottomNavbar'
 'use client'
 import AddToCart from '@/components/AddToCart'
-import Header from '@/components/Header'
-import ProductNavbar from '@/components/ProductNavbar'
+import TopNavbar from '@/components/TopNavbar'
 import useWindowSize from '@/hooks/useWindowSize'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
 function MainLayout({ children }) {
-    const {isDesktop} = useWindowSize()
+    const { isDesktop } = useWindowSize()
     const pathName = usePathname()
     return (
         <>
-            {isDesktop ? <Header />: <ProductNavbar />}
+            {!isDesktop && <TopNavbar title="جزئیات محصول" />}
             {children}
-            {!isDesktop && pathName !== "/products" &&  <AddToCart />}
+            {!isDesktop && pathName !== '/products' && <AddToCart />}
         </>
     )
 }

@@ -1,6 +1,7 @@
 @import url('/fonts/iransans/iransans.css');
 @import url('/fonts/rubik/rubik.css');
 @import url('/fonts/lalezar/lalezar.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +10,7 @@
     .navbarActive {
         background-color: var(--color-bg-input);
     }
+
     .bankSelected {
         background-color: var(--color-success-trans);
         border: var(--color-success);
@@ -16,41 +18,36 @@
 }
 
 :root {
-    --color-bg-primary: rgba(255, 255, 255, 1); /* #FFFFFF */
-    --color-text-primary: rgba(38, 36, 36, 1); /* #262424 */
-    --color-text-secondary: rgba(96, 96, 96, 1); /* #606060 */
-    --color-border: rgba(217, 217, 217, 1); /* #D9D9D9 */
-    --color-bg-input: rgba(244, 244, 244, 1); /* #F4F4F4 */
+    --color-bg-primary: rgba(255, 255, 255, 1);
+    --color-text-primary: rgba(38, 36, 36, 1);
+    --color-text-secondary: rgba(96, 96, 96, 1);
+    --color-border: rgba(217, 217, 217, 1);
+    --color-bg-input: rgba(244, 244, 244, 1);
 
-    --color-success: rgba(34, 197, 94, 1); /* #22C55E */
-    --color-success-trans: rgba(34, 197, 94, 0.3); /* #22C55E */
-    --color-warning: rgba(255, 193, 7, 1); /* #FFC107 */
-    --color-error: rgba(239, 68, 68, 1); /* #EF4444 */
+    --color-success: rgba(34, 197, 94, 1);
+    --color-success-trans: rgba(34, 197, 94, 0.3);
+    --color-warning: rgba(255, 193, 7, 1);
+    --color-error: rgba(239, 68, 68, 1);
 }
 
 .swiper-pagination-progressbar {
-    background: rgba(0, 0, 0, 0.05); /* Change the background color */
+    background: rgba(0, 0, 0, 0.05);
     height: 1px !important;
 }
 
 .swiper-pagination-progressbar-fill {
-    background: var(
-        --color-text-primary
-    ) !important; /* Change this to your desired progress color */
+    background: var(--color-text-primary) !important;
 }
 
 .swiper-pagination-bullet {
-    background-color: rgba(0, 0, 0, 0.05); /* Change bullet color */
-    width: 8px; /* Adjust bullet size */
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 8px;
     height: 8px;
-    opacity: 1; /* Ensure it's always visible */
+    opacity: 1;
 }
 
-/* Active bullet color */
 .swiper-pagination-bullet-active {
-    background-color: var(
-        --color-text-primary
-    ) !important; /* Change active bullet color */
-    width: 10px; /* Optionally make active bullet larger */
+    background-color: var(--color-text-primary) !important;
+    width: 10px;
     height: 10px;
 }

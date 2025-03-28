@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const useWindowSize = () => {
     const [width, setWidth] = useState(
@@ -21,10 +21,10 @@ const useWindowSize = () => {
     }, [])
 
     useEffect(() => {
-        if (width > 768 && width < 1024) {
+        if (width >= 768 && width < 1024) {
             setIsTablet(true)
             setIsDesktop(false)
-        } else if (width > 1024) {
+        } else if (width >= 1024) {
             setIsTablet(false)
             setIsDesktop(true)
         } else {

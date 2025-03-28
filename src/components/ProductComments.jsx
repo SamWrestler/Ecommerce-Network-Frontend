@@ -1,5 +1,6 @@
 import Comment from './Comment'
 import Icons from './Icons'
+
 function ProductComments() {
     return (
         <div className="flex flex-col gap-6 px-5 py-6 border border-textSecondary rounded-sm">

@@ -1,15 +1,15 @@
 'use client'
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper/modules";
-import Icons from "./Icons";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { FreeMode } from 'swiper/modules'
+import Icons from './Icons'
+
 function Filters() {
     return (
         <Swiper
             className="!w-full"
             slidesPerView={3.5}
             modules={[FreeMode]}
-            freeMode={true}
->
+            freeMode={true}>
             <SwiperSlide>
                 <div className="py-1 w-[6rem] text-[20px] border border-textSecondary rounded-md flex items-center justify-around">
                     <p>سایز</p>
@@ -41,7 +41,7 @@ function Filters() {
                 </div>
             </SwiperSlide>
         </Swiper>
-     );
+    )
 }
 
-export default Filters;
+export default Filters

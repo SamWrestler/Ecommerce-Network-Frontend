@@ -1,7 +1,6 @@
 import Category from '@/components/Category'
 import Filters from '@/components/Filters'
 import Icons from '@/components/Icons'
-import NavigateToTop from '@/components/NavigateToTop'
 import ProductCard from '@/components/ProductCard'
 
 function Products() {
@@ -35,27 +34,27 @@ function Products() {
                     <h2 className="font-semibold text-[18px] w-full">
                         فیلتر بر اساس
                     </h2>
-                    <div className='flex  flex-col gap-4 p-2'>
-                    <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
-                        <p>سایز</p>
-                        <Icons name="chevronLeft" />
-                    </div>
-                    <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
-                        <p>جنس</p>
-                        <Icons name="chevronLeft" />
-                    </div>
-                    <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
-                        <p>رنگ</p>
-                        <Icons name="chevronLeft" />
-                    </div>
-                    <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
-                        <p>قیمت</p>
-                        <Icons name="chevronLeft" />
-                    </div>
-                    <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
-                        <p>استایل</p>
-                        <Icons name="chevronLeft" />
-                    </div>
+                    <div className="flex  flex-col gap-4 p-2">
+                        <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
+                            <p>سایز</p>
+                            <Icons name="chevronLeft" />
+                        </div>
+                        <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
+                            <p>جنس</p>
+                            <Icons name="chevronLeft" />
+                        </div>
+                        <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
+                            <p>رنگ</p>
+                            <Icons name="chevronLeft" />
+                        </div>
+                        <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
+                            <p>قیمت</p>
+                            <Icons name="chevronLeft" />
+                        </div>
+                        <div className="flex p-4 !pr-0 cursor-pointer hover:bg-gray-50 hover:rounded-t-md text-[20px] items-center justify-between w-full border-b border-border">
+                            <p>استایل</p>
+                            <Icons name="chevronLeft" />
+                        </div>
                     </div>
                 </div>
             </div>

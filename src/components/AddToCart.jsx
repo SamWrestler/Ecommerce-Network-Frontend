@@ -1,13 +1,12 @@
 'use client'
-import { useState, useEffect } from 'react'
-import Icons from './Icons'
+import { useEffect, useState } from 'react'
 import useWindowSize from '@/hooks/useWindowSize'
 import AddToCartButton from './AddToCartButton'
 
 function AddToCart() {
     const [isVisible, setIsVisible] = useState(true)
     const [lastScrollY, setLastScrollY] = useState(0)
-    const {isDesktop} = useWindowSize()
+    const { isDesktop } = useWindowSize()
     useEffect(() => {
         if (isDesktop) return
         const handleScroll = () => {
@@ -25,7 +24,6 @@ function AddToCart() {
             window.removeEventListener('scroll', handleScroll)
         }
     }, [lastScrollY])
-
 
     return (
         <div
