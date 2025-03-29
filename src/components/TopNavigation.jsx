@@ -1,11 +1,10 @@
 'use client'
 import React from 'react'
 import Icons from './Icons'
-import Image from 'next/image'
 import { Search } from './Search'
-import defaultProfileImage from '/public/images/defaultProfile.png'
 import NavLinks from './NavLinks'
 import useWindowSize from '@/hooks/useWindowSize'
+import HeaderProfilePicture from '@/components/HeaderProfilePicture'
 
 function TopNavigation() {
     const { isTablet, isDesktop } = useWindowSize()
@@ -31,11 +30,7 @@ function TopNavigation() {
                         </p>
                     </div>
                 </Icons>
-                <Image
-                    alt="profile"
-                    src={defaultProfileImage}
-                    className="h-[30px] w-[30px] object-cover rounded-full  border-[0.6px] border-textPrimary"
-                />
+                <HeaderProfilePicture />
             </div>
         </div>
     )

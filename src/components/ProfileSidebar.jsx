@@ -2,11 +2,11 @@ import Icons from '@/components/Icons'
 import Label from '@/components/Label'
 import Link from 'next/link'
 
-export default function ProfileSidebar() {
+export default function ProfileSidebar({ closeModal }) {
     return (
         <div
             dir="rtl"
-            className="w-full font-font flex flex-col gap-8 mt-[6.2rem] desktop:mt-0 pb-12">
+            className="w-full font-font flex flex-col gap-8 mt-[6.2rem] desktop:mt-0">
             {/*Profile Photo and Information*/}
             <div className="flex justify-between gap-4 !w-full ">
                 <div className="w-[7rem] flex-shrink-0 flex items-center justify-center h-[7rem] rounded-full bg-border">
@@ -30,7 +30,6 @@ export default function ProfileSidebar() {
                             </h2>
                         </div>
                     </div>
-                    <Icons name="editSquare" className="text-[22px]" />
                 </div>
             </div>
 
@@ -57,6 +56,7 @@ export default function ProfileSidebar() {
                     <Label text="تنظیمات حساب کاربری" />
                     <Link
                         href="/profile/my-information"
+                        onClick={closeModal}
                         className="flex justify-between items-center w-full">
                         <div className="flex items-center gap-2">
                             <div className="w-[3.2rem] h-[3.2rem] flex items-center justify-center bg-bgInput rounded-full">
@@ -77,6 +77,7 @@ export default function ProfileSidebar() {
                     <Label text="سفارشات" />
                     <Link
                         href="/profile/favorites"
+                        onClick={closeModal}
                         className="flex justify-between items-center w-full">
                         <div className="flex items-center gap-2">
                             <div className="w-[3.2rem] h-[3.2rem] flex items-center justify-center bg-bgInput rounded-full">
@@ -93,6 +94,7 @@ export default function ProfileSidebar() {
                     </Link>
                     <Link
                         href="/profile/orders"
+                        onClick={closeModal}
                         className="flex justify-between items-center w-full">
                         <div className="flex items-center gap-2">
                             <div className="w-[3.2rem] h-[3.2rem] flex items-center justify-center bg-bgInput rounded-full">
