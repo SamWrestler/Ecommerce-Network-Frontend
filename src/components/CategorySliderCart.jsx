@@ -1,19 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
-import CategoryImage from '/public/images/Category.png'
+import Link from 'next/link'
 
-function CategorySliderCart() {
+function CategorySliderCart({ image, text }) {
     return (
-        <div className="w-full flex flex-col items-center gap-2 justify-center">
-            <div className="h-[80px] tablet:h-[100px] tablet:w-[100px] overflow-hidden w-[80px] rounded-full bg-bgInput relative">
+        <Link
+            href={'/products'}
+            className="w-full flex flex-col items-center gap-2 justify-center cursor-pointer">
+            <div className="w-[80px] tablet:w-[100px] aspect-square overflow-hidden rounded-full bg-bgInput relative">
                 <Image
-                    src={CategoryImage}
+                    src={image}
                     alt="Category Image"
-                    className="w-full h-full absolute bottom-[-10px] "
+                    fill
+                    className="object-cover"
                 />
             </div>
-            <h2 className="font-medium">زنانه</h2>
-        </div>
+            <h2 className="font-medium text-center">{text}</h2>
+        </Link>
     )
 }
 

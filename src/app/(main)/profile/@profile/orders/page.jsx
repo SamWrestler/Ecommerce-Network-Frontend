@@ -7,7 +7,7 @@ export default function Orders() {
     const activeOrders = 4
     return (
         <div className="flex flex-col gap-6 w-full items-center p-2">
-            <ProfileLabel text="سلام" />
+            <ProfileLabel text="سفارشات من" />
             <div dir={'rtl'} className="flex font-font flex-col  gap-8 w-full">
                 <div className="flex flex-col gap-2 ">
                     <Label text="سفارشات در جریان" />

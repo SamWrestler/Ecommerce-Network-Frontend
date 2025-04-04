@@ -87,7 +87,7 @@ export default function Code({ codeExpired }) {
     }, [countDown])
 
     return (
-        <div dir="rtl" className="flex flex-col gap-4">
+        <div dir="rtl" className="flex flex-col gap-4 w-full">
             <h2 className="font-semibold text-[18px]">کد تایید</h2>
             <Label text={'کد تایید به شماره 09352318343 ارسال شد'} />
             <form

@@ -13,6 +13,7 @@ function MainLayout({ children }) {
     return (
         <>
             {isDesktop && <Header />}
+            {!isDesktop && pathName === '/' && <Header />}
             {children}
             {/* Show BottomNavbar except for /profile/*, /products/* and /cart */}
             {!isProductPage && pathName !== '/cart' && !isProfile && (

@@ -42,6 +42,7 @@
     "addressCard": "fa-light fa-address-card",
     "logout": "fa-light fa-right-from-bracket",
     "editSquare": "fa-light fa-pen-to-square",
+    "externalLink": "fa-light fa-arrow-up-right-from-square",
     "edit": "fa-light fa-pen",
     "userPen": "fa-light fa-user-pen",
     "locationPen": "fa-solid fa-location-pen",

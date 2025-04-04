@@ -1,4 +1,4 @@
-import CartProductCart from '@/components/CartProductCart'
+import CartProductCard from '@/components/CartProductCard'
 import TopNavbar from '@/components/TopNavbar'
 import Banks from '@/components/Banks'
 import Address from '@/components/Address'
@@ -14,10 +14,10 @@ function Cart() {
                 <div className="flex flex-col">
                     <h2 className="text-textSecondary font-light">سبد خرید</h2>
                     <div className="flex flex-col gap-4">
-                        <CartProductCart />
-                        <CartProductCart />
-                        <CartProductCart />
-                        <CartProductCart />
+                        <CartProductCard />
+                        <CartProductCard />
+                        <CartProductCard />
+                        <CartProductCard />
                     </div>
                 </div>
 

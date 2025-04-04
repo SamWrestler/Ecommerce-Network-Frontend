@@ -7,6 +7,10 @@ import 'swiper/css/pagination'
 import { FreeMode, Pagination } from 'swiper/modules'
 import useWindowSize from '@/hooks/useWindowSize'
 import CategorySliderCart from './CategorySliderCart'
+import men from '/public/images/men.png'
+import women from '/public/images/women.png'
+import children from '/public/images/children.png'
+import teenagers from '/public/images/teenagers.png'
 
 export default function CategorySlider() {
     const { isDesktop } = useWindowSize()
@@ -19,21 +23,18 @@ export default function CategorySlider() {
                 freeMode={true}
                 dir="rtl"
                 className="w-full"
-                // pagination={{
-                //     clickable: true,
-                // }}
                 modules={[FreeMode, Pagination]}>
                 <SwiperSlide>
-                    <CategorySliderCart />
+                    <CategorySliderCart image={men} text={'مردانه'} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <CategorySliderCart />
+                    <CategorySliderCart image={women} text={'زنانه'} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <CategorySliderCart />
+                    <CategorySliderCart image={children} text={'بچگانه'} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <CategorySliderCart />
+                    <CategorySliderCart image={teenagers} text={'نوجوانان'} />
                 </SwiperSlide>
             </Swiper>
         </>

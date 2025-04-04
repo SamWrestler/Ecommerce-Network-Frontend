@@ -10,6 +10,7 @@ export default function CornerModal({
     openModal,
     setOpenModal,
     overFlow = true,
+    cart,
 }) {
     const [displayModal, setDisplayModal] = useState('hidden')
     const modal = useRef(null)
@@ -47,7 +48,7 @@ export default function CornerModal({
     return (
         <div
             ref={modal}
-            className={`${displayModal} absolute ${overFlow && 'overflow-scroll'} overflow-x-hidden z-[100] top-20 right-6 w-[25vw] h-fit max-h-[70vh] py-4 px-6 rounded-xl shadow-custom bg-bgPrimary`}>
+            className={`${displayModal}  absolute ${overFlow ? 'overflow-scroll' : 'overflow-hidden'} overflow-x-hidden z-[100] top-20 ${cart ? 'right-32' : 'right-6'} w-[25vw] h-fit max-h-[70vh] py-4 px-6 rounded-xl shadow-custom bg-bgPrimary`}>
             <div className="w-full">
                 <Icons
                     name={'close'}

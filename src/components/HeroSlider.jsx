@@ -14,46 +14,35 @@ function HeroSlider({ className }) {
     const pagination = {
         clickable: false,
         dynamicBullets: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>'
-        },
     }
 
     return (
-        <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-            }}
-            modules={[Pagination, Autoplay]}
-            pagination={pagination}
-            className={`w-full h-[275px] sm:h-[350px] md:h-[456px] lg:h-[663px] lg:shadow-custom lg:w-[85%] lg:mt-10
-            lg:mb-10 lg:rounded-lg ${className}`}>
-            <SwiperSlide>
-                <Image
-                    src={Slider_1}
-                    alt="Slider's Image"
-                    className="object-cover w-full h-full"
-                />
-            </SwiperSlide>
-            <SwiperSlide>
-                <Image
-                    src={Slider_2}
-                    alt="Slider's Image"
-                    className="object-cover w-full h-full"
-                />
-            </SwiperSlide>
-            <SwiperSlide>
-                <Image
-                    src={Slider_3}
-                    alt="Slider's Image"
-                    className="object-cover w-full h-full"
-                />
-            </SwiperSlide>
-        </Swiper>
+        <div
+            className={`w-full desktop:w-[80vw] desktop:mt-8 aspect-video relative overflow-hidden desktop:rounded-2xl shadow-custom ${className}`}>
+            <Swiper
+                spaceBetween={0}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Pagination, Autoplay]}
+                pagination={pagination}
+                className="w-full h-full">
+                {[Slider_1, Slider_2, Slider_3].map((image, index) => (
+                    <SwiperSlide key={index}>
+                        <Image
+                            src={image}
+                            alt={`Slider image ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
     )
 }
 

@@ -1,12 +1,12 @@
 import Icons from '@/components/Icons'
 import Label from '@/components/Label'
-import Link from 'next/link'
+import ProfileButton from '@/components/ProfileButton'
 
 export default function ProfileSidebar({ closeModal }) {
     return (
         <div
             dir="rtl"
-            className="w-full font-font flex flex-col gap-8 mt-[6.2rem] desktop:mt-0">
+            className="w-full font-font flex flex-col gap-8 mt-[6.2rem] desktop:mt-0 container desktop:px-0">
             {/*Profile Photo and Information*/}
             <div className="flex justify-between gap-4 !w-full ">
                 <div className="w-[7rem] flex-shrink-0 flex items-center justify-center h-[7rem] rounded-full bg-border">
@@ -54,61 +54,28 @@ export default function ProfileSidebar({ closeModal }) {
             <div className="flex flex-col gap-8 w-full">
                 <div className="flex flex-col gap-3 w-full">
                     <Label text="تنظیمات حساب کاربری" />
-                    <Link
-                        href="/profile/my-information"
-                        onClick={closeModal}
-                        className="flex justify-between items-center w-full">
-                        <div className="flex items-center gap-2">
-                            <div className="w-[3.2rem] h-[3.2rem] flex items-center justify-center bg-bgInput rounded-full">
-                                <Icons
-                                    name="addressCard"
-                                    className="text-[20px]"
-                                />
-                            </div>
-                            <h2 className="font-medium text-[18px]">
-                                اطلاعات من
-                            </h2>
-                        </div>
-                        <Icons name="chevronLeft" className="text-[20px]" />
-                    </Link>
+                    <ProfileButton
+                        href={'/profile/my-information'}
+                        closeModal={closeModal}
+                        text={'اطلاعات من'}
+                        icon={'addressCard'}
+                    />
                 </div>
 
                 <div className="flex flex-col gap-3 w-full">
                     <Label text="سفارشات" />
-                    <Link
-                        href="/profile/favorites"
-                        onClick={closeModal}
-                        className="flex justify-between items-center w-full">
-                        <div className="flex items-center gap-2">
-                            <div className="w-[3.2rem] h-[3.2rem] flex items-center justify-center bg-bgInput rounded-full">
-                                <Icons
-                                    name="heartOutline"
-                                    className="text-[20px]"
-                                />
-                            </div>
-                            <h2 className="font-medium text-[18px]">
-                                لیست علاقه‌مندی‌ها
-                            </h2>
-                        </div>
-                        <Icons name="chevronLeft" className="text-[20px]" />
-                    </Link>
-                    <Link
-                        href="/profile/orders"
-                        onClick={closeModal}
-                        className="flex justify-between items-center w-full">
-                        <div className="flex items-center gap-2">
-                            <div className="w-[3.2rem] h-[3.2rem] flex items-center justify-center bg-bgInput rounded-full">
-                                <Icons
-                                    name="shoppingBagsLight"
-                                    className="text-[20px]"
-                                />
-                            </div>
-                            <h2 className="font-medium text-[18px]">
-                                سفارشات من
-                            </h2>
-                        </div>
-                        <Icons name="chevronLeft" className="text-[20px]" />
-                    </Link>
+                    <ProfileButton
+                        href={'/profile/favorites'}
+                        closeModal={closeModal}
+                        text={'لیست علاقه‌مندی‌ها'}
+                        icon={'heartOutline'}
+                    />
+                    <ProfileButton
+                        href={'/profile/orders'}
+                        closeModal={closeModal}
+                        text={'سفارشات من'}
+                        icon={'shoppingBagsLight'}
+                    />
                 </div>
 
                 <div className="flex flex-col gap-3 w-full">

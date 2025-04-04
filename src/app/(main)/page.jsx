@@ -10,7 +10,9 @@ export const metadata = {
 }
 const Home = () => {
     return (
-        <section id="main" className="font-font flex flex-col pb-24">
+        <section
+            id="main"
+            className="font-font flex flex-col pb-24 desktop:items-center overflow-x-hidden">
             <HeroSlider />
             <div className="flex flex-col gap-12">
                 <Category />
