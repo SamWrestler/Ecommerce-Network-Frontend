@@ -3,7 +3,7 @@
 import Button from '@/components/Button'
 import Input from '@/components/Input'
 import InputError from '@/components/InputError'
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
 import { useState } from 'react'
@@ -36,7 +36,7 @@ const Page = () => {
         <form onSubmit={submitForm}>
             {/* Name */}
             <div>
-                <Label htmlFor="name">Name</Label>
+                <FormLabel htmlFor="name">Name</FormLabel>
 
                 <Input
                     id="name"
@@ -53,7 +53,7 @@ const Page = () => {
 
             {/* Email Address */}
             <div className="mt-4">
-                <Label htmlFor="email">Email</Label>
+                <FormLabel htmlFor="email">Email</FormLabel>
 
                 <Input
                     id="email"
@@ -69,7 +69,7 @@ const Page = () => {
 
             {/* Password */}
             <div className="mt-4">
-                <Label htmlFor="password">Password</Label>
+                <FormLabel htmlFor="password">Password</FormLabel>
 
                 <Input
                     id="password"
@@ -86,7 +86,9 @@ const Page = () => {
 
             {/* Confirm Password */}
             <div className="mt-4">
-                <Label htmlFor="passwordConfirmation">Confirm Password</Label>
+                <FormLabel htmlFor="passwordConfirmation">
+                    Confirm Password
+                </FormLabel>
 
                 <Input
                     id="passwordConfirmation"

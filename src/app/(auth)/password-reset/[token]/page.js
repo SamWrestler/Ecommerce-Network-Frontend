@@ -3,7 +3,7 @@
 import Button from '@/components/Button'
 import Input from '@/components/Input'
 import InputError from '@/components/InputError'
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 import { useAuth } from '@/hooks/auth'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
@@ -44,7 +44,7 @@ const PasswordReset = () => {
             <form onSubmit={submitForm}>
                 {/* Email Address */}
                 <div>
-                    <Label htmlFor="email">Email</Label>
+                    <FormLabel htmlFor="email">Email</FormLabel>
 
                     <Input
                         id="email"
@@ -61,7 +61,7 @@ const PasswordReset = () => {
 
                 {/* Password */}
                 <div className="mt-4">
-                    <Label htmlFor="password">Password</Label>
+                    <FormLabel htmlFor="password">Password</FormLabel>
                     <Input
                         id="password"
                         type="password"
@@ -76,9 +76,9 @@ const PasswordReset = () => {
 
                 {/* Confirm Password */}
                 <div className="mt-4">
-                    <Label htmlFor="passwordConfirmation">
+                    <FormLabel htmlFor="passwordConfirmation">
                         Confirm Password
-                    </Label>
+                    </FormLabel>
 
                     <Input
                         id="passwordConfirmation"

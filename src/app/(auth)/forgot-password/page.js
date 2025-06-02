@@ -3,7 +3,7 @@
 import Button from '@/components/Button'
 import Input from '@/components/Input'
 import InputError from '@/components/InputError'
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 import { useAuth } from '@/hooks/auth'
 import { useState } from 'react'
 import AuthSessionStatus from '@/app/(auth)/AuthSessionStatus'
@@ -38,7 +38,7 @@ const Page = () => {
             <form onSubmit={submitForm}>
                 {/* Email Address */}
                 <div>
-                    <Label htmlFor="email">Email</Label>
+                    <FormLabel htmlFor="email">Email</FormLabel>
                     <Input
                         id="email"
                         type="email"

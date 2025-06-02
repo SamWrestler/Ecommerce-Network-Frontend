@@ -1,5 +1,5 @@
 import TopNavbar from '@/components/TopNavbar'
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 import Icons from '@/components/Icons'
 import Order from '@/components/Order'
 
@@ -12,7 +12,7 @@ export default function Orders() {
                 dir={'rtl'}
                 className="flex font-font flex-col mt-[6rem] gap-8 container">
                 <div className="flex flex-col gap-2">
-                    <Label text="سفارشات در جریان" />
+                    <FormLabel text="سفارشات در جریان" />
                     <div className="w-full tablet:w-[50%] flex items-center justify-around py-5 px-3 rounded-xl bg-textPrimary  border-border">
                         <div className="flex flex-col gap-4">
                             <h2 className="text-bgPrimary font-medium text-[20px]">
@@ -29,7 +29,7 @@ export default function Orders() {
                     </div>
                 </div>
                 <div className="flex flex-col gap-8">
-                    <Label text="سفارشات در جریان" />
+                    <FormLabel text="سفارشات در جریان" />
                     <div className={'w-full flex justify-around items-center'}>
                         <div className="flex flex-col gap-2">
                             <div className={'relative'}>
@@ -58,7 +58,7 @@ export default function Orders() {
                     </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                    <Label text="همه سفارشات" />
+                    <FormLabel text="همه سفارشات" />
                     <div className="flex flex-col gap-12">
                         <Order status={'delivered'} />
                         <Order status={'canceled'} />

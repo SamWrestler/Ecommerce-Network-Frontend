@@ -22,14 +22,54 @@ module.exports = {
                 lalezar: ['lalezar'],
             },
             colors: {
-                bgPrimary: 'var(--color-bg-primary)',
-                textPrimary: 'var(--color-text-primary)',
-                textSecondary: 'var(--color-text-secondary)',
-                border: 'var(--color-border)',
-                bgInput: 'var(--color-bg-input)',
-                success: 'var(--color-success)',
-                warning: 'var(--color-warning)',
-                error: 'var(--color-error)',
+                bgPrimary: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-bg-primary), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-bg-primary))'
+                },
+                textPrimary: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-text-primary), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-text-primary))'
+                },
+                textSecondary: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-text-secondary), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-text-secondary))'
+                },
+                border: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-border), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-border))'
+                },
+                bgInput: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-bg-input), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-bg-input))'
+                },
+                success: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-success), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-success))'
+                },
+                warning: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-warning), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-warning))'
+                },
+                error: ({ opacityValue }) => {
+                    if (opacityValue !== undefined) {
+                        return `rgba(var(--color-error), ${opacityValue})`
+                    }
+                    return 'rgb(var(--color-error))'
+                },
             },
         },
     },

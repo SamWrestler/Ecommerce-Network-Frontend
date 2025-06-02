@@ -1,4 +1,4 @@
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 import Icons from '@/components/Icons'
 
 export default function Login({ loginSubmitted }) {
@@ -6,7 +6,7 @@ export default function Login({ loginSubmitted }) {
         <div dir="rtl" className="w-full flex flex-col gap-4">
             <h2 className="font-semibold text-[18px]">ورود به حساب کاربری</h2>
             <div className="flex flex-col w-full gap-2">
-                <Label
+                <FormLabel
                     text={'شماره تلفن خود را جهت ورود یا ثبت نام وارد کنید'}
                 />
                 <form action="#" className="w-full flex flex-col gap-4">

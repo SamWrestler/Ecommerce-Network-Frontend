@@ -1,5 +1,5 @@
 import Icons from '@/components/Icons'
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 import ProfileButton from '@/components/ProfileButton'
 
 export default function ProfileSidebar({ closeModal }) {
@@ -18,13 +18,13 @@ export default function ProfileSidebar({ closeModal }) {
                 <div className="flex items-start justify-between w-full pl-2 pt-2">
                     <div className="flex flex-col gap-4 items-start">
                         <div className="flex flex-col gap-2">
-                            <Label text="نام و نام‌خانوادگی" />
+                            <FormLabel text="نام و نام‌خانوادگی" />
                             <h2 className="text-textPrimary font-medium text-[20px]">
                                 سامان مختاری
                             </h2>
                         </div>
                         <div className="flex flex-col gap-2">
-                            <Label text="امتیاز خرید شما" />
+                            <FormLabel text="امتیاز خرید شما" />
                             <h2 className="text-success font-medium text-[20px]">
                                 1,234
                             </h2>
@@ -53,7 +53,7 @@ export default function ProfileSidebar({ closeModal }) {
             {/*Buttons*/}
             <div className="flex flex-col gap-8 w-full">
                 <div className="flex flex-col gap-3 w-full">
-                    <Label text="تنظیمات حساب کاربری" />
+                    <FormLabel text="تنظیمات حساب کاربری" />
                     <ProfileButton
                         href={'/profile/my-information'}
                         closeModal={closeModal}
@@ -63,7 +63,7 @@ export default function ProfileSidebar({ closeModal }) {
                 </div>
 
                 <div className="flex flex-col gap-3 w-full">
-                    <Label text="سفارشات" />
+                    <FormLabel text="سفارشات" />
                     <ProfileButton
                         href={'/profile/favorites'}
                         closeModal={closeModal}
@@ -79,7 +79,7 @@ export default function ProfileSidebar({ closeModal }) {
                 </div>
 
                 <div className="flex flex-col gap-3 w-full">
-                    <Label text="پشتیبانی" />
+                    <FormLabel text="پشتیبانی" />
                     <div className="flex justify-between items-center w-full">
                         <div className="flex items-center gap-2">
                             <div className="w-[3.2rem] h-[3.2rem] flex items-center justify-center bg-bgInput rounded-full">

@@ -2,7 +2,7 @@ import CartProductCard from '@/components/CartProductCard'
 import TopNavbar from '@/components/TopNavbar'
 import Banks from '@/components/Banks'
 import Address from '@/components/Address'
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 
 function Cart() {
     return (
@@ -46,17 +46,17 @@ function Cart() {
                             <p className="text-blue-500">3 کالا</p>
                         </div>
                         <div className="flex w-full items-center justify-between">
-                            <Label text={'قیمت کالاها'} />
+                            <FormLabel text={'قیمت کالاها'} />
                             <p className="font-normal">1,150,000 ءتءء</p>
                         </div>
                         <div className="flex w-full items-center justify-between">
-                            <Label text={'تخفیف کالاها'} />
+                            <FormLabel text={'تخفیف کالاها'} />
                             <p className="font-normal text-error">
                                 150,000 ءتءء
                             </p>
                         </div>
                         <div className="flex w-full items-center justify-between">
-                            <Label text={'جمع سبد خرید'} />
+                            <FormLabel text={'جمع سبد خرید'} />
                             <p className="text-[20px]">856,000 ءتءء</p>
                         </div>
                     </div>

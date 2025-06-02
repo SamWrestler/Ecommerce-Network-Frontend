@@ -1,0 +1,50 @@
+'use client'
+import { useEffect, useRef, useState } from 'react'
+import LocationPicker from '@/components/LocationPicker'
+import PrimaryButton from '@/components/PrimaryButton'
+import Icons from '@/components/Icons'
+import { useRouter } from 'next/navigation'
+
+export default function Location() {
+    const mapContainerRef = useRef(null)
+    const [coordinates, setCoordinates] = useState(null)
+    const router = useRouter()
+
+    useEffect(() => {
+        const sessionValidation = sessionStorage.getItem('setCoordinates')
+        if (sessionValidation === 'false' || sessionValidation === null)
+            router.push('/profile/my-information/new-address')
+    }, [router])
+
+    return (
+        <div className="flex w-full h-full  font-font relative">
+            <div
+                className="w-screen h-screen desktop:w-full desktop:h-full relative"
+                ref={mapContainerRef}>
+                <LocationPicker
+                    mapContainerRef={mapContainerRef}
+                    setCoordinates={setCoordinates}
+                />
+            </div>
+            <PrimaryButton
+                text="ثبت موقعیت"
+                className="absolute w-10/12 desktop:w-[80%] desktop:bottom-18 bottom-4 left-1/2 -translate-x-1/2 z-[150]"
+                onClick={() => {
+                    sessionStorage.setItem(
+                        'coordinates',
+                        JSON.stringify(coordinates),
+                    )
+
+                    sessionStorage.removeItem('setCoordinates')
+
+                    return router.back()
+                }}
+            />
+            <div
+                className="flex justify-center items-center w-12 h-12 bg-textPrimary rounded-full shadow-custom absolute top-4 left-4"
+                onClick={() => router.back()}>
+                <Icons name="close" className="text-bgPrimary text-[25px]" />
+            </div>
+        </div>
+    )
+}

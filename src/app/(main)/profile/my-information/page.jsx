@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import Icons from '@/components/Icons'
 import TopNavbar from '@/components/TopNavbar'
 import Address from '@/components/Address'
-import Label from '@/components/Label'
+import FormLabel from '@/components/FormLabel'
 
 function MyInformation() {
     const [name, setName] = useState('سامان مختاری')
@@ -39,7 +39,7 @@ function MyInformation() {
                 <form action="#">
                     {/* Name */}
                     <div className="flex flex-col gap-1">
-                        <Label text=" نام و نام‌خانوادگی" />
+                        <FormLabel text=" نام و نام‌خانوادگی" />
                         <div className="w-full flex relative">
                             <input
                                 ref={inputRef} // Attach the reference to the input field
@@ -59,7 +59,7 @@ function MyInformation() {
 
                     {/* Gender */}
                     <div className="flex flex-col gap-1 mt-4">
-                        <Label text="جنسیت" />
+                        <FormLabel text="جنسیت" />
                         <div className="w-full flex relative">
                             <select
                                 className="w-full py-4 rounded-sm disabled:opacity-30"
@@ -79,7 +79,7 @@ function MyInformation() {
 
                     {/* Email */}
                     <div className="flex flex-col gap-1 mt-4">
-                        <Label text="آدرس ایمیل" />
+                        <FormLabel text="آدرس ایمیل" />
                         <div className="w-full flex relative">
                             <input
                                 ref={inputRef}
@@ -99,7 +99,7 @@ function MyInformation() {
 
                     {/* Phone */}
                     <div className="flex flex-col gap-1 mt-4">
-                        <Label text="شماره تلفن" />
+                        <FormLabel text="شماره تلفن" />
                         <div className="w-full flex relative">
                             <input
                                 dir="rtl"
@@ -120,7 +120,7 @@ function MyInformation() {
 
                     {/* Birth Date */}
                     <div className="flex flex-col gap-1 mt-4">
-                        <Label text="تاریخ تولد" />
+                        <FormLabel text="تاریخ تولد" />
                         <div className="w-full flex relative">
                             <input
                                 dir="rtl"
@@ -142,7 +142,7 @@ function MyInformation() {
                     </div>
 
                     <div className="flex flex-col gap-2 mt-4">
-                        <Label text="آدرس‌ها" />
+                        <FormLabel text="آدرس‌ها" />
                         <div className="flex flex-col gap-2">
                             <Address edit={true} />
                             <Address edit={true} />
