@@ -2,7 +2,7 @@
 # Ecommerce Network – Next.js React Frontend
 
 
-Built a responsive e-commerce frontend with Next.js 13 and Tailwind CSS, integrated via REST APIs with a Laravel backend. Features include authentication, dynamic product listing, search with filters, shopping cart, and user dashboard. Used custom React hooks and followed modern App Router architecture for scalability and clean UI.
+Built a responsive e-commerce frontend with Next.js 15 and Tailwind CSS, integrated via REST APIs with a Laravel backend. Features include authentication, dynamic product listing, search with filters, shopping cart, and user dashboard. Used custom React hooks and followed modern App Router architecture for scalability and clean UI.
 
 
 
@@ -34,7 +34,7 @@ Built a responsive e-commerce frontend with Next.js 13 and Tailwind CSS, integra
 - Mobile-first UX with conditional layouts and navigation visibility
 
 ## Tech Stack
-* Next.js 13 (App Router)
+* Next.js 15 (App Router)
 * React (functional components, hooks)
 * SWR (data fetching and caching)
 * Axios (HTTP client, with CSRF and cookie support)
@@ -51,7 +51,7 @@ Built a responsive e-commerce frontend with Next.js 13 and Tailwind CSS, integra
 ## How it works
 
 
-The Ecommerce Network frontend is built with Next.js 13 and interacts seamlessly with a Laravel backend via RESTful APIs. When a user visits the site, the global layout (`app/layout.jsx`) loads first, applying Tailwind CSS styles and ensuring FontAwesome icons are available. The application immediately checks for an active session by calling `/api/user` through the centralized Axios instance. If a valid session exists (Laravel Sanctum cookie-based authentication), the user data is cached by SWR and stored in the `useAuth` hook; otherwise, the user remains in a guest state.
+The Ecommerce Network frontend is built with Next.js 15 and interacts seamlessly with a Laravel backend via RESTful APIs. When a user visits the site, the global layout (`app/layout.jsx`) loads first, applying Tailwind CSS styles and ensuring FontAwesome icons are available. The application immediately checks for an active session by calling `/api/user` through the centralized Axios instance. If a valid session exists (Laravel Sanctum cookie-based authentication), the user data is cached by SWR and stored in the `useAuth` hook; otherwise, the user remains in a guest state.
 
 **Authentication & Route Protection**
 All authentication actions (register, login, logout, forgot password, reset password, email verification) occur through dedicated API endpoints on the Laravel backend. When a user submits their email and password on the Login page, Axios sends a POST to `/api/login` including CSRF headers. Upon success, Laravel Sanctum issues a session cookie, which SWR immediately uses to fetch `/api/user` and populate the `useAuth` state. Protected routes (e.g., “/profile” or any page with `middleware="auth"`) automatically redirect unauthenticated users to the login page; authenticated users attempting to access guest-only pages (register, login) are redirected to the homepage. For logout, the frontend calls `/api/logout` via `useAuth.logout()`, clearing the session cookie and resetting SWR’s cached user.
